@@ -1,0 +1,174 @@
+// ========================================
+// Weather Widget - SCSS Variables
+// ========================================
+
+// Colors - Primary
+// ========================================
+$color-primary-start: #667eea;
+$color-primary-end: #764ba2;
+$gradient-primary: linear-gradient(135deg, $color-primary-start 0%, $color-primary-end 100%);
+
+// Colors - Text
+// ========================================
+$color-text-primary: #333;
+$color-text-secondary: #666;
+$color-text-muted: #999;
+$color-text-white: #fff;
+$color-text-error: #e74c3c;
+$color-text-error-light: #ffcccc;
+
+// Colors - Background
+// ========================================
+$color-bg-white: #fff;
+$color-bg-light: #f8f9fa;
+$color-bg-lighter: #f5f5f5;
+$color-bg-hover: #e9ecef;
+
+// Colors - Border
+// ========================================
+$color-border-light: #ddd;
+$color-border-lighter: #e0e0e0;
+$color-border-focus: $color-primary-start;
+
+// Typography
+// ========================================
+$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+// Font Sizes
+$font-size-xs: 13px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-2xl: 32px;
+$font-size-3xl: 48px;
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Spacing
+// ========================================
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 20px;
+$spacing-xl: 24px;
+$spacing-2xl: 30px;
+$spacing-3xl: 60px;
+
+// Border Radius
+// ========================================
+$border-radius-sm: 4px;
+$border-radius-md: 6px;
+$border-radius-lg: 8px;
+$border-radius-xl: 12px;
+$border-radius-round: 50%;
+
+// Box Shadows
+// ========================================
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+// Transitions
+// ========================================
+$transition-fast: 0.15s;
+$transition-base: 0.2s;
+$transition-slow: 0.3s;
+
+$transition-all: all $transition-base ease;
+$transition-transform: transform $transition-base ease;
+$transition-color: color $transition-base ease;
+$transition-opacity: opacity $transition-base ease;
+$transition-background: background-color $transition-base ease;
+$transition-border: border-color $transition-base ease;
+$transition-box-shadow: box-shadow $transition-base ease;
+
+// Sizes
+// ========================================
+$size-button-sm: 24px;
+$size-button-md: 32px;
+$size-button-lg: 40px;
+
+$size-icon-sm: 16px;
+$size-icon-md: 20px;
+$size-icon-lg: 80px;
+
+$size-spinner-sm: 40px;
+
+// Z-index
+// ========================================
+$z-index-dropdown: 1000;
+$z-index-modal: 1050;
+$z-index-tooltip: 1100;
+
+// Grid & Layout
+// ========================================
+$grid-gap: 20px;
+$grid-min-column-width: 280px;
+
+$container-max-width: 1200px;
+
+// Component Specific
+// ========================================
+
+// CityCard
+$city-card-min-height: 200px;
+$city-card-icon-size: $size-icon-lg;
+$city-card-icon-margin: -10px;
+
+// Settings
+$settings-max-width: 500px;
+$settings-content-max-height: 500px;
+
+// Breakpoints
+// ========================================
+$breakpoint-mobile: 768px;
+
+// Mixins
+// ========================================
+@mixin hover-lift {
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@mixin hover-background {
+  transition: background-color $transition-base;
+
+  &:hover {
+    background: $color-bg-hover;
+  }
+}
+
+@mixin reset-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
