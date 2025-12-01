@@ -34,5 +34,5 @@ Simply add these two lines to your HTML file:
 
 ```html
 <weather-widget api-key="YOUR_API_KEY_HERE"></weather-widget>
-<script type="text/javascript" src="https://github.com/boikoalexey/weather-widget-test/weather-widget.js"></script>
+<script type="text/javascript" src="https://boikoalexey.github.io/weather-widget-test/weather-widget.js"></script>
 ```
