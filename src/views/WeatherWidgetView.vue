@@ -67,7 +67,6 @@ const storageService = new StorageService()
 const geolocationService = new GeolocationService()
 
 const loadWeatherForCity = async (city: City) => {
-  city.loading = true
   city.error = undefined
 
   try {
@@ -76,8 +75,6 @@ const loadWeatherForCity = async (city: City) => {
     city.error =
       error instanceof Error ? error.message : 'Failed to load weather'
     throw error
-  } finally {
-    city.loading = false
   }
 }
 
@@ -95,7 +92,6 @@ const handleAddCity = async (
   const newCity: City = {
     id: Date.now().toString(),
     name: cityName,
-    loading: true,
   }
 
   try {
@@ -138,7 +134,6 @@ const initializeWidget = async () => {
         id: Date.now().toString(),
         name: weather.name,
         weather: weather,
-        loading: false,
       }
 
       cities.value = [userCity]
@@ -245,7 +240,8 @@ onMounted(() => {
 
 .spinner {
   border-radius: $border-radius-round;
-  border: 3px solid #f3f3f3;
+  border: 3px solid $color-border-lighter;
+  border-top: 3px solid $color-border-focus;
   width: $size-spinner-sm;
   height: $size-spinner-sm;
   animation: spin 1s linear infinite;

@@ -1,10 +1,6 @@
 <template>
-  <div class="city-card" :class="{ 'city-card--loading': city.loading }">
-    <div v-if="city.loading" class="city-card__loader">
-      <div class="spinner"></div>
-    </div>
-
-    <div v-else-if="city.error" class="city-card__error">
+  <div class="city-card">
+    <div v-if="city.error" class="city-card__error">
       <p>{{ city.error }}</p>
     </div>
 
@@ -178,23 +174,6 @@ const weatherDetails = computed(() => {
     &-value {
       font-weight: $font-weight-semibold;
     }
-  }
-}
-
-.spinner {
-  border-radius: $border-radius-round;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  width: $size-spinner-sm;
-  height: $size-spinner-sm;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 </style>
